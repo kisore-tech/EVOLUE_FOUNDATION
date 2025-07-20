@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <>
-      <div style={{ height: '5px', width: '100%', backgroundColor: '#005FA5' }}></div>
+      <div style={{ height: '5px', width: '100%', backgroundColor: '#005FA5',marginBottom:'10px', marginLeft:'20px' }}></div>
       
       <div style={{
         width: '100%',
@@ -32,7 +32,8 @@ export default function Footer() {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        fontFamily: 'Open Sans, sans-serif'
+        fontFamily: 'Open Sans, sans-serif',
+        marginLeft:'20px'
       }}>
         {/* Left Section: Our Activities */}
         <div style={{ flex: '1 1 300px', minWidth: '250px' }}>

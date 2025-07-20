@@ -25,9 +25,9 @@ const impactData = [
 export default function Home_page() {
   return (
     <div>
-      <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between',marginTop:'10px',marginRight:'8px', width:'100%'}}>
+      <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between',marginTop:'10px',marginRight:'8px', width:'100%',flexWrap: 'wrap'}}>
             <div   style={{
-              marginLeft:'50px',
+              marginLeft:'30px',
               marginTop:'30px'
                 }}>
                  <a className="navbar-brand" 
@@ -38,11 +38,24 @@ export default function Home_page() {
              
               
             <div>
-                <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-end',marginTop:'10px',marginRight:'8px', paddingLeft:'80px'}}>
-                <SocialIcons/>
-                <YellowButton/>
-                </div>
-                <div
+                <div style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
+                        marginTop: '10px',
+                        marginRight: '8px',
+                        paddingLeft: '80px',
+                        // flexWrap: 'wrap',
+                        // rowGap: '10px',  // 👈 Adds vertical space when wrapping
+                        // // or simply:
+                        // // gap: '10px'   // adds both row and column spacing
+                      }}>
+                        <SocialIcons />
+                        <YellowButton />
+                 </div>
+
+                {/* <div
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
@@ -52,16 +65,19 @@ export default function Home_page() {
                         backgroundColor: '#ffffff', // optional background
                         fontSize: '16px',
                         fontWeight: '500',
-                    }}>
-                    <a className="nav-link active" href="#">Home</a>
+                       
+                    }}> */}
+                    {/* <a className="nav-link active" href="#">Home</a>
                     <a className="nav-link active" href="#">Our Activities</a>
                     <a className="nav-link active" href="#">Join Us</a>
                     <a className="nav-link active" href="#">About Us</a>
-                    <a className="nav-link active" href="#">Contact Us</a>
-                </div>
-              
+                    <a className="nav-link active" href="#">Contact Us</a> */}
+                    
+                {/* </div> */}
+               <Navbar/>
            </div>    
       </div>
+        
           <Carousel/>
           <div style={{padding:'50px', marginBottom:'0px'}}>
                <p>
@@ -75,7 +91,7 @@ export default function Home_page() {
               </p>
             </div>
           
-          <div style={{ backgroundColor: '#004d99', color: 'white', padding: '40px 20px', textAlign: 'center' }}>
+          <div style={{ backgroundColor: '#004d99', color: 'white', padding: '40px 20px', textAlign: 'center',width:'100%',marginLeft:'20px' }}>
            <h2 className="text-3xl font-bold mb-10">OUR IMPACT</h2>
            <div style={{
                 display:'flex',
@@ -83,7 +99,8 @@ export default function Home_page() {
                 flexWrap:'wrap',
                 justifyContent:'space-around',
                 gap:'30px',
-                marginTop:'40px'
+                marginTop:'40px',
+                marginLeft:'20px'
            }}>
            {impactData.map((item, index) => (
             <div key={index} className="min-w-[200px] flex-1">
@@ -121,7 +138,7 @@ export default function Home_page() {
                                </div>
                         </div>
      {/* <Support/> */}
-     <div style={{marginTop:'30px',height: '45vh'}}>
+     <div style={{marginTop:'30px',height: '30vh',width: '100%',marginLeft:'20px'}}>
          <img src={Volunteer}  alt="..." style={{height: '100%',width:'100%'}}/>
      </div>
 
